@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--Llamamos a la "plantilla"-->
+{% extends 'blog/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-</head>
+<!--empezamos el block content y lo cerramos donde queramos que termine
+y dde aqui sera "enviado" y tranformado-->
 
-<body>
+{% block content %}
+<div class="post">
+
     {% if post.published_date %}
-    <div>
+    <div class="date">
         {{post.published_date}}
     </div>
     {% endif %}
 
     <h1>{{post.title}}</h1>
     <p>{{post.text|linebreaksbr}}</p>
-</body>
+</div>
 
-</html>
+
+{% endblock %}
