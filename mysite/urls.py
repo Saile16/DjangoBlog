@@ -18,5 +18,6 @@ from django.urls import path, include  # agregamos include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # confirmar , esto agregamos para que inicie la pagina webcon este url
     path('', include('blog.urls'))
 ]
