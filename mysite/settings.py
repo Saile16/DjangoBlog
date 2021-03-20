@@ -26,6 +26,8 @@ SECRET_KEY = '%q2yy6c1q7m-+3*7s^@f+m#7r=w4a^#%2tre%yr74sqe-)=^_1'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# Esto es agregado para el login y te redirige a la pagina principal
+LOGIN_REDIRECT_URL = 'post_list'
 
 
 # Application definition

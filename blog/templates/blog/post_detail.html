@@ -1,6 +1,9 @@
 <!--Llamamos a la "plantilla"-->
 {% extends 'blog/base.html' %}
 
+{% block title %}
+{{post.title}}
+{% endblock %}
 <!--empezamos el block content y lo cerramos donde queramos que termine
 y dde aqui sera "enviado" y tranformado-->
 
