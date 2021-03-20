@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 # Esto es agregado para el login y te redirige a la pagina principal
 LOGIN_REDIRECT_URL = 'post_list'
+# Usamos esto para el logout la forma de path no funciona aun
+LOGOUT_REDIRECT_URL = 'post_list'
 
 
 # Application definition

@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.views import LoginView
+
 
 # esto te llevara a los viewst post donde tenemos definido unas views y eso mostrara
 # recordar qwue tambien tenemos que cambiar las urls de mysite
@@ -13,6 +13,5 @@ urlpatterns = [
     path('post/<int:pk>/edit/', views.post_edit, name="post_edit"),
     path('drafts/', views.post_draft_list, name='post_draft_list'),
     path('post/<int:pk>/publish/', views.post_publish, name='post_publish'),
-    # Django toma el template de login desde un folder llamado registration recordar y crear eso
-    path('accounts/login/', LoginView.as_view(), name='login')
+
 ]

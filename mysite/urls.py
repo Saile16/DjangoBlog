@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include  # agregamos include
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Django toma el template de login desde un folder llamado registration recordar y crear eso
+    path('accounts/login/', LoginView.as_view(), name='login'),
+    # funcion logout
+    path('accounts/logout/', LogoutView.as_view(), name='logout'),
     # confirmar , esto agregamos para que inicie la pagina webcon este url
-    path('', include('blog.urls'))
+    path('', include('blog.urls')),
+
 ]
