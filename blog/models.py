@@ -21,3 +21,20 @@ class Post(models.Model):
     def __str__(self):
         return self.title
         # return self.title + ' por ' + str(self.author)
+
+# recordar hacer python manage.py makemigrate luego python manage.py migrate
+# tambien agregar en admin.py
+
+
+class Comment(models.Model):
+    # on_delete significa si eliminamos un post todoslos comentarios relacionados al post
+    # tienen que elminarse
+    post = models.ForeignKey(
+        'blog.Post', on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.text
+    # Post.objects.get(pk=2).comments.all()

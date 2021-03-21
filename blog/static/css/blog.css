@@ -47,6 +47,10 @@ color:#000000;
 .top-menu:hover{
     color:#ffffff;
     float:right;
-       font-size:26px;
+    font-size:26pt;
     margin-right:20px;
+}
+
+.comment{
+    margin:20px 0 20px 20px;
 }

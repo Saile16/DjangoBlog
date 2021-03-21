@@ -22,6 +22,7 @@ urlpatterns = [
     # Django toma el template de login desde un folder llamado registration recordar y crear eso
     path('accounts/login/', LoginView.as_view(), name='login'),
     # funcion logout
+    # en settings esta la redireccion tanto para log in y out
     path('accounts/logout/', LogoutView.as_view(), name='logout'),
     # confirmar , esto agregamos para que inicie la pagina webcon este url
     path('', include('blog.urls')),
