@@ -25,7 +25,10 @@ SECRET_KEY = '%q2yy6c1q7m-+3*7s^@f+m#7r=w4a^#%2tre%yr74sqe-)=^_1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 ALLOWED_HOSTS = []
+
 # Esto es agregado para el login y te redirige a la pagina principal
 LOGIN_REDIRECT_URL = 'post_list'
 # Usamos esto para el logout la forma de path no funciona aun
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
