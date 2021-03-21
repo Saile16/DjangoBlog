@@ -1,5 +1,6 @@
 <!--Llamamos a la "plantilla"-->
 {% extends 'blog/base.html' %}
+{% load markdownify %}
 {% block title %}
 My blog
 {% endblock%}
@@ -11,7 +12,7 @@ My blog
     </div>
 
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-    <p>{{post.text|truncatechars:40|linebreaksbr}}</p>
+    <p>{{post.text|markdown|safe|truncatechars:35|linebreaksbr}}</p>
     <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{post.approved_comments.count}}</a>
 </div>
 {% endfor %}
