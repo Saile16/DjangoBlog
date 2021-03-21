@@ -32,6 +32,9 @@ y dde aqui sera "enviado" y tranformado-->
     <div class="date">
         {{comment.created_date}}
     </div>
+    {% if user.is_authenticated %}
+    <a href="{% url 'comment_remove' pk=comment.pk %}" class="btn"><i class="far fa-trash-alt fa-2x"></i></a>
+    {% endif %}
     <strong>{{comment.author}}</strong>
     <p>{{comment.text}}</p>
 </div>
