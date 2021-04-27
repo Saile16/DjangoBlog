@@ -10,8 +10,8 @@ class Post(models.Model):
     text = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-
     # este metodo lo usamos en los drafts
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
