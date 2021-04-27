@@ -15,5 +15,6 @@ My blog
     <p>{{post.text|markdown|safe|truncatechars:35|linebreaksbr}}</p>
     <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{post.approved_comments.count}}</a>
 </div>
+<hr>
 {% endfor %}
 {% endblock %}

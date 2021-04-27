@@ -19,7 +19,7 @@ class CommentForm(forms.ModelForm):
 
 
 class UserForm(forms.ModelForm):
-    password: forms.CharField(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput())
     helper = FormHelper()
     helper.form_method = 'POST'
     helper.add_input(Submit('Sign up', 'Sign up', css_class='btn-primary'))
